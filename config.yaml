@@ -17,6 +17,7 @@ wing:
   - center_section_l: 47 # in
   - web_t: 0.025 # in
   - cap_t: 0.125 # in
+  - cap_w: 1 # in
   - cap_h: 1 # in
   - dihedral: 6 # degreesÏ
   - doubler_1_t: 0.125 # in

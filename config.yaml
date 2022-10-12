@@ -1,0 +1,46 @@
+---
+# Constants
+basics:
+  - fuel: 24 # gal
+  - gross_w: 1320 # lb
+  - c_l_max: 1.7 # dimensionless
+  - hp: 100 # BHP
+  - v_so: 50 # mph
+  - v_s: 44 # mph
+  - n_1: 4 # g
+tail:
+  - web_t: 0.025 # in
+  - cap_t: 0.75 # in
+  - cap_h: 0.125 # in
+wing:
+  - b: 332 # in
+  - center_section_l: 47 # in
+  - web_t: 0.025 # in
+  - cap_t: 0.125 # in
+  - cap_h: 1 # in
+  - dihedral: 6 # degreesÏ
+  - doubler_1_t: 0.125 # in
+  - doubler_2_t: 0.125 # in
+  - doubler_3_t: 0.125 # in
+  - doubler_1_l: 36 # in
+  - doubler_2_l: 24 # in
+  - doubler_3_l: 12 # in
+  - rib_t: 0.025 # in
+  - skin_t: 0.025 # in
+flap:
+  - c_flap: 12 # in
+  - l_flap: 72 # in
+  - delta: 30 # degrees
+aileron:
+  - c_aileron: 12 # in
+  - l_aileron: 72 # in
+  - delta: 30 # degrees
+fuselage:
+  - rear_longerons_t: 0.125 # in
+  - rear_longerons_h: 1 # in
+  - cabin_top_skin_t: 0.032 # in
+  - cabin_side_skin_t: 0.032 # in
+  - cabin_bottom_skin_t: 0.032 # in
+  - top_skin_t: 0.025 # in
+  - side_skin_t: 0.025 # in
+  - bottom_skin_t: 0.025 # in

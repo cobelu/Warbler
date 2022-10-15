@@ -1,12 +1,16 @@
 import math
+from dataclasses import dataclass
 
 
+@dataclass
 class Basics:
     def __init__(self, n, bhp, s, w):
-        self.n = n
-        self.w = w
-        self.s = s
-        self.bhp = bhp
+        # Parameters
+        self.n = n  # g
+        self.w = w  # kg
+        self.s = s  # m^2
+        self.bhp = bhp  # bhp
+        # Calculations
         self.wing_loading = self.w / self.s
 
     def n_1(self):
@@ -67,7 +71,7 @@ class Basics:
 
     def w_a(self):
         # TODO: Implement this
-        limit = self.n_1 * self.wing_loading
+        limit = self.n_1() * self.wing_loading
         return 0.466 * limit
 
     def v_h(self):

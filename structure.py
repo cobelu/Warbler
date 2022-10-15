@@ -1,12 +1,26 @@
 import math
 
+FOS = 1.5
+
 
 class Metal:
-    def __init__(self, sigma_u: int, sigma_y: int, tau_u: int, p_b: int):
-        self.sigma_u: int = sigma_u
-        self.sigma_y: int = sigma_y
-        self.tau_u: int = tau_u
-        self.p_b: int = p_b
+    def __init__(self, sigma_u: float, sigma_y: float, tau_u: float, p_b: float):
+        self.sigma_u: float = sigma_u
+        self.sigma_y: float = sigma_y
+        self.tau_u: float = tau_u
+        self.p_b: float = p_b
+
+    def ult_margin_of_safety(self, sigma):
+        return (self.sigma_u / sigma) - 1
+
+    def yield_margin_of_safety(self, sigma):
+        return (self.sigma_y / sigma) - 1
+
+    def does_fail(self, sigma):
+        return self.ult_margin_of_safety(sigma) > 1
+
+    def does_yield(self, sigma):
+        return self.ult_margin_of_safety(sigma) > 1
 
 
 class Aluminum6061T6(Metal):
